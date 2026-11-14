@@ -74,7 +74,7 @@ Một hai lập trình viên, vài màn hình, không có kế hoạch di độn
 
 ## Dùng cả hai
 
-Một back office chạy bằng meta-driven UI, cộng một dashboard công khai. Dùng Owl cho back office và React cho dashboard, với một API rõ ràng ở giữa. Tránh dùng chung component giữa hai bên.
+Một back office xây dựng dưới dạng meta-driven UI, cộng một dashboard công khai. Dùng Owl cho back office và React cho dashboard, với một API rõ ràng ở giữa. Tránh dùng chung component giữa hai bên.
 
 ## Cách chọn
 

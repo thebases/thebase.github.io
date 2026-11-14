@@ -74,7 +74,7 @@ One or two developers, a handful of screens, no mobile plan. Either works. Lean 
 
 ## Using both
 
-A back office driven by meta-driven UI, plus a public dashboard. Use Owl for the back office and React for the dashboard, with a clear API between them. Avoid sharing components across the two.
+A back office built as meta-driven UI, plus a public dashboard. Use Owl for the back office and React for the dashboard, with a clear API between them. Avoid sharing components across the two.
 
 ## How to choose
 
