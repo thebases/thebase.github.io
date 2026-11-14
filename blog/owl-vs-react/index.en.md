@@ -52,7 +52,7 @@ Owl state is an object you change directly. React state is immutable and changes
 | TypeScript and tooling | Limited for templates | First class |
 | Mobile and SSR | Not built in | React Native, Next.js |
 
-## Use Owl for server-driven screens
+## Use Owl for meta-driven UI
 
 A platform stores screen definitions as data. The client must load fast on weak networks, run from a static host, and keep the deploy pipeline free of a bundler.
 
@@ -74,13 +74,13 @@ One or two developers, a handful of screens, no mobile plan. Either works. Lean 
 
 ## Using both
 
-A back office driven by server-defined screens, plus a public dashboard. Use Owl for the back office and React for the dashboard, with a clear API between them. Avoid sharing components across the two.
+A back office driven by meta-driven UI, plus a public dashboard. Use Owl for the back office and React for the dashboard, with a clear API between them. Avoid sharing components across the two.
 
 ## How to choose
 
 ```mermaid
 flowchart TD
-  A[New frontend] --> B{Server-driven screens or no build?}
+  A[New frontend] --> B{Meta-driven UI or no build?}
   B -- Yes --> C[Owl]
   B -- No --> D{Large team, mobile or SSR?}
   D -- Yes --> E[React]
