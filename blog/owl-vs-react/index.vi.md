@@ -91,4 +91,4 @@ flowchart TD
 
 Hãy chọn theo quy mô đội, việc tuyển dụng, kế hoạch nền tảng và cách màn hình được cung cấp. Framework chỉ là phần nhỏ hơn của quyết định đó.
 
-Bạn có câu hỏi hoặc trải nghiệm khác với một trong hai? Hãy viết tới [community@thebase.vn](mailto:community@thebase.vn) hoặc tham gia thảo luận trên [GitHub](https://github.com/thebases).
+Bạn có câu hỏi hoặc trải nghiệm khác với một trong hai? Hãy viết tới [community@thebase.vn](mailto:community@thebase.vn).

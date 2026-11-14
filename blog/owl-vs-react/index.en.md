@@ -91,4 +91,4 @@ flowchart TD
 
 Choose by team size, hiring, platform plans and how screens are delivered. The framework is the smaller part of that decision.
 
-Questions or a different experience with either one? Write to [community@thebase.vn](mailto:community@thebase.vn) or join the discussion on [GitHub](https://github.com/thebases).
+Questions or a different experience with either one? Write to [community@thebase.vn](mailto:community@thebase.vn).
