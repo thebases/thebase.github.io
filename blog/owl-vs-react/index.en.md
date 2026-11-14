@@ -55,7 +55,7 @@ Owl state is an object you change directly. React state is immutable and changes
 
 A platform stores screen definitions as data. The client must load fast on weak networks, run from a static host, and keep the deploy pipeline free of a bundler.
 
-Templates are text, so the server can store, extend and send them. Deploy is "copy the folder", and a service worker can precache the few files for offline use. Direct state changes keep forms and tables short. This is the model Base HUB follows. [VERIFY: confirm Base HUB's frontend runs on Owl.]
+Templates are text, so the server can store, extend and send them. Deploy is "copy the folder", and a service worker can precache the few files for offline use. Direct state changes keep forms and tables short. The Base Hub product, which I develop, uses this mechanism too.
 
 The cost: fewer ready-made components, so some are written in-house.
 

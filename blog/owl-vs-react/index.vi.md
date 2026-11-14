@@ -55,7 +55,7 @@ State của Owl là một đối tượng được sửa trực tiếp. State c�
 
 Một nền tảng lưu định nghĩa màn hình dưới dạng dữ liệu. Phía client phải tải nhanh trên mạng yếu, chạy được từ máy chủ tĩnh, và pipeline triển khai không có bundler.
 
-Template là văn bản, nên máy chủ có thể lưu, mở rộng và gửi chúng. Triển khai chỉ là "chép thư mục", và service worker có thể cache sẵn vài file để dùng offline. Sửa state trực tiếp giúp form và bảng ngắn gọn. Base HUB theo mô hình này. [VERIFY: xác nhận frontend của Base HUB chạy trên Owl.]
+Template là văn bản, nên máy chủ có thể lưu, mở rộng và gửi chúng. Triển khai chỉ là "chép thư mục", và service worker có thể cache sẵn vài file để dùng offline. Sửa state trực tiếp giúp form và bảng ngắn gọn. Sản phẩm Base Hub do tôi phát triển cũng sử dụng cơ chế này.
 
 Cái giá: ít component làm sẵn hơn, nên một số phải tự viết.
 
