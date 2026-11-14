@@ -48,6 +48,7 @@ State của Owl là một đối tượng được sửa trực tiếp. State c�
 | Template | XML, tách khỏi logic | JSX, nằm trong hàm |
 | Hệ sinh thái | Nhỏ | Rất lớn |
 | Tuyển dụng | Khó | Dễ |
+| Đường cong học tập | API nhỏ, nhưng ít tài liệu hướng dẫn | Nhiều khái niệm hơn, nhiều tài liệu hướng dẫn |
 | TypeScript và công cụ | Hạn chế với template | Hỗ trợ hạng nhất |
 | Di động và SSR | Không có sẵn | React Native, Next.js |
 

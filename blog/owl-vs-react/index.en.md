@@ -48,6 +48,7 @@ Owl state is an object you change directly. React state is immutable and changes
 | Templates | XML, separate from logic | JSX, inside the function |
 | Ecosystem | Small | Very large |
 | Hiring | Hard | Easy |
+| Learning curve | Small API, but few tutorials | More concepts, many tutorials |
 | TypeScript and tooling | Limited for templates | First class |
 | Mobile and SSR | Not built in | React Native, Next.js |
 
