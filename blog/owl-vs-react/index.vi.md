@@ -52,7 +52,7 @@ State của Owl là một đối tượng được sửa trực tiếp. State c�
 | TypeScript và công cụ | Hạn chế với template | Hỗ trợ hạng nhất |
 | Di động và SSR | Không có sẵn | React Native, Next.js |
 
-## Dùng Owl cho màn hình theo máy chủ
+## Dùng Owl cho server-driven screens
 
 Một nền tảng lưu định nghĩa màn hình dưới dạng dữ liệu. Phía client phải tải nhanh trên mạng yếu, chạy được từ máy chủ tĩnh, và pipeline triển khai không có bundler.
 
@@ -74,13 +74,13 @@ Một hai lập trình viên, vài màn hình, không có kế hoạch di độn
 
 ## Dùng cả hai
 
-Một back office chạy bằng màn hình định nghĩa ở máy chủ, cộng một dashboard công khai. Dùng Owl cho back office và React cho dashboard, với một API rõ ràng ở giữa. Tránh dùng chung component giữa hai bên.
+Một back office chạy bằng server-driven screens, cộng một dashboard công khai. Dùng Owl cho back office và React cho dashboard, với một API rõ ràng ở giữa. Tránh dùng chung component giữa hai bên.
 
 ## Cách chọn
 
 ```mermaid
 flowchart TD
-  A[Frontend mới] --> B{Màn hình theo máy chủ hoặc không build?}
+  A[Frontend mới] --> B{Server-driven screens hoặc không build?}
   B -- Có --> C[Owl]
   B -- Không --> D{Đội lớn, di động hoặc SSR?}
   D -- Có --> E[React]
