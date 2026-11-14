@@ -1,0 +1,5 @@
+#!/bin/sh
+# Rebuilds the blog post list and RSS feeds and stages them, so every commit ships fresh generated files.
+set -e
+make blog
+git add blog/posts.json blog/feed*.xml

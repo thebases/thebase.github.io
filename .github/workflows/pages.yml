@@ -46,7 +46,7 @@ jobs:
           mkdir _site
           rsync -a \
             --exclude '/_site' --exclude '.git' --exclude '.github' \
-            --exclude '.agents' --exclude '.claude' --exclude 'CLAUDE.md' \
+            --exclude '.githooks' --exclude '.agents' --exclude '.claude' --exclude 'CLAUDE.md' \
             --exclude '/scripts' --exclude '/Makefile' --exclude '/serve.bat' \
             ./ _site/
           test "$(jq -r .version _site/version.json)" = "$(jq -r .version version.json)"

@@ -1,0 +1,280 @@
+{
+  "posts": [
+    {
+      "slug": "ui/about-nodex-ui",
+      "group": "ui",
+      "author": "The Base",
+      "langs": {
+        "en": {
+          "title": "Nodex UI: a UI library with no build step, made to work with AI",
+          "description": "Nodex UI is a component library for Owl that loads from one script tag. Why I use it, how it works, what it covers, how to build with AI, and where it fits.",
+          "file": "index.en.md",
+          "seo": {
+            "title": "Nodex UI: a UI library with no build step, made to work with AI | The Base",
+            "description": "Nodex UI is a component library for Owl that loads from one script tag. Why I use it, how it works, what it covers, how to build with AI, and where it fits.",
+            "keywords": [
+              "nodex-ui",
+              "owl",
+              "frontend",
+              "ai"
+            ],
+            "image": "https://thebase.vn/assets/img/icon-512x512.png",
+            "noindex": false
+          }
+        }
+      },
+      "tags": [
+        {
+          "label": "nodex-ui",
+          "slug": "nodex-ui"
+        },
+        {
+          "label": "owl",
+          "slug": "owl"
+        },
+        {
+          "label": "frontend",
+          "slug": "frontend"
+        },
+        {
+          "label": "ai",
+          "slug": "ai"
+        }
+      ],
+      "date": "2026-11-14",
+      "position": 5
+    },
+    {
+      "slug": "ui/owl-vs-react",
+      "group": "ui",
+      "author": "The Base",
+      "langs": {
+        "en": {
+          "title": "Owl vs React: which one fits which situation?",
+          "description": "Owl is small and needs no build step. React has a larger ecosystem and more developers. So which framework should you choose in specific situations?",
+          "file": "index.en.md",
+          "seo": {
+            "title": "Owl vs React: which one fits which situation? | The Base",
+            "description": "Owl is small and needs no build step. React has a larger ecosystem and more developers. So which framework should you choose in specific situations?",
+            "keywords": [
+              "owl",
+              "react",
+              "frontend"
+            ],
+            "image": "https://thebase.vn/assets/img/icon-512x512.png",
+            "noindex": false
+          }
+        },
+        "vi": {
+          "title": "Owl vs React: chọn framework nào cho tình huống nào?",
+          "description": "Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?",
+          "file": "index.vi.md",
+          "seo": {
+            "title": "Owl vs React: chọn framework nào cho tình huống nào? | The Base",
+            "description": "Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?",
+            "keywords": [
+              "owl",
+              "react",
+              "frontend"
+            ],
+            "image": "https://thebase.vn/assets/img/icon-512x512.png",
+            "noindex": false
+          }
+        }
+      },
+      "tags": [
+        {
+          "label": "owl",
+          "slug": "owl"
+        },
+        {
+          "label": "react",
+          "slug": "react"
+        },
+        {
+          "label": "frontend",
+          "slug": "frontend"
+        }
+      ],
+      "date": "2026-11-14",
+      "position": 4
+    },
+    {
+      "slug": "ui/make-a-simple-todo-app-with-owl",
+      "group": "ui",
+      "author": "The Base",
+      "langs": {
+        "en": {
+          "title": "Make a simple todo app with Owl",
+          "description": "Build a todo app with Owl in one HTML file and about 150 lines. No bundler. Add, toggle, delete and filter tasks, and save them in local storage.",
+          "file": "index.en.md",
+          "seo": {
+            "title": "Make a simple todo app with Owl | The Base",
+            "description": "Build a todo app with Owl in one HTML file and about 150 lines. No bundler. Add, toggle, delete and filter tasks, and save them in local storage.",
+            "keywords": [
+              "owl",
+              "frontend",
+              "tutorial"
+            ],
+            "image": "https://thebase.vn/assets/img/icon-512x512.png",
+            "noindex": false
+          }
+        },
+        "vi": {
+          "title": "Owl vs React: chọn framework nào cho tình huống nào?",
+          "description": "Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?",
+          "file": "index.vi.md",
+          "seo": {
+            "title": "Owl vs React: chọn framework nào cho tình huống nào? | The Base",
+            "description": "Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?",
+            "keywords": [
+              "owl",
+              "react",
+              "frontend"
+            ],
+            "image": "https://thebase.vn/assets/img/icon-512x512.png",
+            "noindex": false
+          }
+        }
+      },
+      "tags": [
+        {
+          "label": "owl",
+          "slug": "owl"
+        },
+        {
+          "label": "frontend",
+          "slug": "frontend"
+        },
+        {
+          "label": "tutorial",
+          "slug": "tutorial"
+        }
+      ],
+      "date": "2026-11-14",
+      "updated": "2026-11-14",
+      "position": 3
+    },
+    {
+      "slug": "ui/how-does-owl-work",
+      "group": "ui",
+      "author": "The Base",
+      "langs": {
+        "en": {
+          "title": "How does the Owl framework work?",
+          "description": "A plain look inside Owl, the small JavaScript framework from Odoo. Components, reactive state, templates, the lifecycle and the two-phase render, step by step.",
+          "file": "index.en.md",
+          "seo": {
+            "title": "How does the Owl framework work? | The Base",
+            "description": "A plain look inside Owl, the small JavaScript framework from Odoo. Components, reactive state, templates, the lifecycle and the two-phase render, step by step.",
+            "keywords": [
+              "owl",
+              "frontend",
+              "javascript"
+            ],
+            "image": "https://thebase.vn/assets/img/icon-512x512.png",
+            "noindex": false
+          }
+        },
+        "vi": {
+          "title": "Owl vs React: chọn framework nào cho tình huống nào?",
+          "description": "Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?",
+          "file": "index.vi.md",
+          "seo": {
+            "title": "Owl vs React: chọn framework nào cho tình huống nào? | The Base",
+            "description": "Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?",
+            "keywords": [
+              "owl",
+              "react",
+              "frontend"
+            ],
+            "image": "https://thebase.vn/assets/img/icon-512x512.png",
+            "noindex": false
+          }
+        }
+      },
+      "tags": [
+        {
+          "label": "owl",
+          "slug": "owl"
+        },
+        {
+          "label": "frontend",
+          "slug": "frontend"
+        },
+        {
+          "label": "javascript",
+          "slug": "javascript"
+        }
+      ],
+      "date": "2026-11-14",
+      "updated": "2026-11-14",
+      "position": 2
+    },
+    {
+      "slug": "ui/what-is-owl-framework",
+      "group": "ui",
+      "author": "The Base",
+      "langs": {
+        "en": {
+          "title": "What is the Owl framework?",
+          "description": "Owl is a small JavaScript framework from Odoo. It uses classes, XML templates and explicit state, and it runs in the browser with no build step. Here is how it works.",
+          "file": "index.en.md",
+          "seo": {
+            "title": "What is the Owl framework? | The Base",
+            "description": "Owl is a small JavaScript framework from Odoo. It uses classes, XML templates and explicit state, and it runs in the browser with no build step. Here is how it works.",
+            "keywords": [
+              "owl",
+              "frontend",
+              "javascript"
+            ],
+            "image": "https://thebase.vn/assets/img/icon-512x512.png",
+            "noindex": false
+          }
+        },
+        "vi": {
+          "title": "Owl framework là gì?",
+          "description": "Owl là một framework JavaScript nhỏ của Odoo. Nó dùng class, template XML và state tường minh, chạy trực tiếp trên trình duyệt mà không cần bước build.",
+          "file": "index.vi.md",
+          "seo": {
+            "title": "Owl framework là gì? | The Base",
+            "description": "Owl là một framework JavaScript nhỏ của Odoo. Nó dùng class, template XML và state tường minh, chạy trực tiếp trên trình duyệt mà không cần bước build.",
+            "keywords": [
+              "owl",
+              "frontend",
+              "javascript"
+            ],
+            "image": "https://thebase.vn/assets/img/icon-512x512.png",
+            "noindex": false
+          }
+        }
+      },
+      "tags": [
+        {
+          "label": "owl",
+          "slug": "owl"
+        },
+        {
+          "label": "frontend",
+          "slug": "frontend"
+        },
+        {
+          "label": "javascript",
+          "slug": "javascript"
+        }
+      ],
+      "date": "2026-11-14",
+      "position": 1
+    }
+  ],
+  "groups": [
+    {
+      "path": "ui",
+      "parent": "",
+      "titles": {
+        "en": "UI",
+        "vi": "Giao diện"
+      }
+    }
+  ]
+}

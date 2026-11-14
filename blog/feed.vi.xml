@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Blog The Base</title>
+    <link>https://thebase.vn/?lang=vi#/blog</link>
+    <description>Tin tức, ghi chú phát hành và ghi chú kỹ thuật về thanh toán, ERP và AI từ cộng đồng The Base.</description>
+    <language>vi</language>
+    <atom:link href="https://thebase.vn/blog/feed.vi.xml" rel="self" type="application/rss+xml" />
+    <item><title>Owl vs React: chọn framework nào cho tình huống nào?</title><link>https://thebase.vn/?lang=vi#/blog/ui/owl-vs-react</link><guid isPermaLink="true">https://thebase.vn/?lang=vi#/blog/ui/owl-vs-react</guid><dc:creator>The Base</dc:creator><pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate><description>Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?</description><category>owl</category><category>react</category><category>frontend</category></item>
+    <item><title>Owl vs React: chọn framework nào cho tình huống nào?</title><link>https://thebase.vn/?lang=vi#/blog/ui/make-a-simple-todo-app-with-owl</link><guid isPermaLink="true">https://thebase.vn/?lang=vi#/blog/ui/make-a-simple-todo-app-with-owl</guid><dc:creator>The Base</dc:creator><pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate><description>Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?</description><category>owl</category><category>frontend</category><category>tutorial</category></item>
+    <item><title>Owl vs React: chọn framework nào cho tình huống nào?</title><link>https://thebase.vn/?lang=vi#/blog/ui/how-does-owl-work</link><guid isPermaLink="true">https://thebase.vn/?lang=vi#/blog/ui/how-does-owl-work</guid><dc:creator>The Base</dc:creator><pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate><description>Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?</description><category>owl</category><category>frontend</category><category>javascript</category></item>
+    <item><title>Owl framework là gì?</title><link>https://thebase.vn/?lang=vi#/blog/ui/what-is-owl-framework</link><guid isPermaLink="true">https://thebase.vn/?lang=vi#/blog/ui/what-is-owl-framework</guid><dc:creator>The Base</dc:creator><pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate><description>Owl là một framework JavaScript nhỏ của Odoo. Nó dùng class, template XML và state tường minh, chạy trực tiếp trên trình duyệt mà không cần bước build.</description><category>owl</category><category>frontend</category><category>javascript</category></item>
+  </channel>
+</rss>
