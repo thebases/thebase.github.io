@@ -1,0 +1,98 @@
+<templates xml:space="preserve">
+  <t t-name="site.Header">
+    <header class="site-header border-bottom">
+      <div class="container d-flex align-items-center gap-3 py-2">
+        <a t-att-href="props.c.base" class="site-brand" aria-label="The Base">
+          <img class="logo-light" src="/assets/img/logo.png" alt="The Base" width="96" height="48"/>
+          <img class="logo-dark" src="/assets/img/logo_dark.png" alt="The Base" width="48" height="48"/>
+        </a>
+        <nav class="d-flex align-items-center gap-1 ms-auto" aria-label="Main">
+          <a class="nav-link-site" t-att-href="props.c.base + 'products.html'" t-att-aria-current="props.page === 'products' ? 'page' : undefined"><t t-esc="props.c.nav.products"/></a>
+          <a class="nav-link-site d-none d-sm-inline" t-att-href="props.c.base + '#contact'"><t t-esc="props.c.nav.contact"/></a>
+          <Button variant="'ghost'" size="'icon'" icon="'languages'" ariaLabel="props.c.other.label" href="props.c.other.base + (props.page === 'products' ? 'products.html' : '')"/>
+          <Button variant="'ghost'" size="'icon'" icon="'code-xml'" ariaLabel="'GitHub'" href="props.c.links.github"/>
+          <ThemeButton t-if="props.page !== 'home'"/>
+        </nav>
+      </div>
+    </header>
+  </t>
+
+  <t t-name="site.Footer">
+    <footer class="site-footer border-top py-4 mt-5">
+      <div class="container d-flex flex-column flex-md-row gap-2 justify-content-between small text-body-secondary">
+        <span>© <t t-esc="new Date().getFullYear()"/> <t t-esc="props.c.footer.rights"/> · <a t-att-href="props.c.links.mail">community@thebase.vn</a></span>
+        <span><t t-esc="props.c.footer.license"/> <a t-att-href="props.c.links.github">github.com/thebases</a></span>
+      </div>
+    </footer>
+  </t>
+
+  <t t-name="site.ProductCard">
+    <Card className="'h-100 product-card'">
+      <CardBody className="'d-flex flex-column gap-3'">
+        <img t-if="props.item.image" class="product-shot" t-att-src="props.item.image.src" t-att-alt="props.item.image.alt" t-att-width="props.item.image.width" t-att-height="props.item.image.height" loading="lazy"/>
+        <div class="d-flex align-items-center gap-3">
+          <span class="mono-mark" aria-hidden="true"><t t-esc="props.item.name.charAt(0)"/></span>
+          <div class="flex-grow-1">
+            <CardTitle className="'h5 mb-0'"><t t-esc="props.item.name"/></CardTitle>
+          </div>
+          <Badge variant="'secondary'" label="props.item.tag"/>
+        </div>
+        <CardDescription className="'mb-0 flex-grow-1'"><t t-esc="props.item.value"/></CardDescription>
+        <div><Button variant="'secondary'" size="'sm'" icon="'arrow-right'" iconPosition="'end'" label="props.item.cta" href="props.item.href"/></div>
+      </CardBody>
+    </Card>
+  </t>
+
+  <t t-name="page.home">
+    <div>
+      <SiteHeader c="c" page="'home'"/>
+      <main>
+        <section class="hero text-center" b-theme="dark">
+          <video class="hero-video" autoplay="" muted="" playsinline="" loop="" disablepictureinpicture="" aria-hidden="true"><source t-att-src="c.base + 'assets/videoBG.mp4'" type="video/mp4"/></video>
+          <div class="hero-content container py-5">
+            <h1 class="display-5 fw-bold mx-auto"><t t-esc="c.home.h1"/></h1>
+            <p class="lead mx-auto"><t t-esc="c.home.sub"/></p>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+              <Button size="'lg'" label="c.home.ctaProducts" href="c.base + 'products.html'"/>
+              <Button size="'lg'" variant="'outline'" label="c.home.ctaGithub" href="c.links.github"/>
+            </div>
+          </div>
+        </section>
+        <section class="container py-4" aria-labelledby="featured-h">
+          <h2 id="featured-h" class="h3"><t t-esc="c.home.featuredTitle"/></h2>
+          <p class="text-body-secondary"><t t-esc="c.home.featuredSub"/></p>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3" t-foreach="featured" t-as="item" t-key="item.id">
+              <ProductCard item="item" c="c"/>
+            </div>
+          </div>
+          <div class="mt-4"><Button variant="'link'" icon="'arrow-right'" iconPosition="'end'" label="c.home.all" href="c.base + 'products.html'"/></div>
+        </section>
+        <section id="contact" class="container py-5 text-center">
+          <h2 class="h3"><t t-esc="c.home.contactTitle"/></h2>
+          <p class="text-body-secondary"><t t-esc="c.home.contactSub"/></p>
+          <Button icon="'mail'" label="c.home.contactCta" href="c.links.mail"/>
+        </section>
+      </main>
+      <SiteFooter c="c"/>
+    </div>
+  </t>
+
+  <t t-name="page.products">
+    <div>
+      <SiteHeader c="c" page="'products'"/>
+      <main>
+        <section class="container py-5">
+          <h1 class="display-6 fw-bold"><t t-esc="c.products.h1"/></h1>
+          <p class="lead text-body-secondary"><t t-esc="c.products.sub"/></p>
+          <div class="row g-3 mt-2">
+            <div class="col-12 col-md-6 col-lg-4" t-foreach="c.items" t-as="item" t-key="item.id">
+              <ProductCard item="item" c="c"/>
+            </div>
+          </div>
+        </section>
+      </main>
+      <SiteFooter c="c"/>
+    </div>
+  </t>
+</templates>

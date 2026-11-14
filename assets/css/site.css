@@ -1,0 +1,29 @@
+/* Black and white brand: everything uses Nodex UI theme variables so dark mode follows. */
+.site-header { background: var(--bs-body-bg); position: sticky; top: 0; z-index: 10; }
+.site-brand img { height: 40px; width: auto; border-radius: 6px; }
+.logo-dark { display: none; }
+/* Dark mode uses a deep blue to match the hero video instead of pure black. */
+[b-theme="dark"] { --b-background: #060d1f; --b-surface: #0a1329; --b-muted: #1a2d5e; --b-accent: #1a2d5e; --b-secondary: #1a2d5e; --b-sidebar: #0a1329; --b-border: #18274a; --b-input: #1e3263; --bs-body-bg-rgb: 6, 13, 31; --bs-secondary-bg-rgb: 26, 45, 94; --bs-tertiary-bg-rgb: 26, 45, 94; }
+[b-theme="dark"] body, [b-theme="dark"] .site-footer { background: var(--b-background); }
+[b-theme="dark"] .logo-light { display: none; }
+[b-theme="dark"] .logo-dark { display: inline-block; }
+.nav-link-site { color: var(--bs-body-color); text-decoration: none; padding: 0.4rem 0.6rem; border-radius: 6px; font-size: 0.9rem; }
+.nav-link-site:hover, .nav-link-site[aria-current="page"] { background: var(--bs-secondary-bg); }
+.hero h1 { max-width: 18ch; letter-spacing: -0.02em; }
+.hero .lead { max-width: 60ch; }
+/* Full-width, full-height hero (viewport minus the 77px sticky header) with a looping video behind dimmed text. */
+.hero { position: relative; display: grid; place-items: center; min-height: calc(100svh - 77px); overflow: hidden; color: #fff; background: #060d1f; }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(6, 13, 31, 0.55); }
+.hero-content { position: relative; z-index: 1; }
+.mono-mark { display: inline-grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 8px; background: var(--bs-body-color); color: var(--bs-body-bg); font-weight: 700; flex: none; }
+.feature-list { padding-left: 1.1rem; }
+.feature-list li { margin-bottom: 0.4rem; }
+.snippet { background: var(--bs-secondary-bg); border-radius: 8px; padding: 1rem; overflow-x: auto; font-size: 0.8rem; }
+section[id] { scroll-margin-top: 4.5rem; }
+a:focus-visible { outline: 2px solid var(--bs-body-color); outline-offset: 2px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+/* Product screenshots keep their aspect ratio and get a soft frame so white screenshots stand out in both themes. */
+.product-shot { display: block; width: 100%; height: auto; border: 1px solid var(--bs-border-color); border-radius: 8px; }
+/* Card pictures share one fixed frame and scale to fit whole (no cropping); white fill blends with the white screenshots. */
+.product-card .product-shot { aspect-ratio: 16 / 10; object-fit: contain; object-position: top; background: #fff; }
