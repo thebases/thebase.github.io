@@ -10,16 +10,23 @@ export function parseRoute() {
   return { page, contact: parts[0] === "contact" };
 }
 
+// Fetches the generated blog data; a missing file (not built yet) fails with a message that names the fix instead of a JSON parse error.
+async function blogData() {
+  const response = await fetch("/blog/posts.json");
+  if (!response.ok) throw new Error(`/blog/posts.json returned ${response.status}: run "make blog" (it is generated, not committed)`);
+  return response.json();
+}
+
 // Loads the groups, each with its title in the visitor's language.
 export async function loadGroups() {
-  const { groups } = await (await fetch("/blog/posts.json")).json();
+  const { groups } = await blogData();
   return groups.map((g) => ({ ...g, title: g.titles[currentLanguage()] ?? g.titles.en }));
 }
 
 // Loads the post list and gives each post the title/summary in the visitor's language (or its fallback language).
 export async function loadPosts() {
   const lang = currentLanguage();
-  const { posts } = await (await fetch("/blog/posts.json")).json();
+  const { posts } = await blogData();
   return posts.map((p) => {
     const shown = p.langs[lang] ? lang : p.langs.en ? "en" : Object.keys(p.langs)[0];
     return { ...p, ...p.langs[shown], translated: shown === lang, shown };
