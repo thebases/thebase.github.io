@@ -1,0 +1,18 @@
+<templates xml:space="preserve">
+  <t t-name="site.ProductCard">
+    <Card className="'h-100 product-card'">
+      <CardBody className="'d-flex flex-column gap-3'">
+        <AspectRatio t-if="props.item.image" ratio="'16 / 10'" className="'product-frame'">
+          <img class="product-shot" t-att-src="props.item.image.src" t-att-alt="props.item.image.alt" t-att-width="props.item.image.width" t-att-height="props.item.image.height" loading="lazy"/>
+        </AspectRatio>
+        <div class="d-flex align-items-center gap-2">
+          <Avatar alt="props.item.name"><t t-set-slot="fallback"><t t-esc="props.item.name.charAt(0)"/></t></Avatar>
+          <CardTitle className="'h5 mb-0 flex-grow-1'"><t t-esc="props.item.name"/></CardTitle>
+          <Badge variant="'secondary'" label="props.item.tag"/>
+        </div>
+        <CardDescription className="'mb-0 flex-grow-1'"><t t-esc="props.item.value"/></CardDescription>
+        <div><Button variant="'secondary'" size="'sm'" icon="'arrow-right'" iconPosition="'end'" label="props.item.cta" href="props.item.href"/></div>
+      </CardBody>
+    </Card>
+  </t>
+</templates>

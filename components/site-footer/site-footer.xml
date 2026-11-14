@@ -1,0 +1,11 @@
+<templates xml:space="preserve">
+  <t t-name="site.Footer">
+    <footer class="site-footer mt-5">
+      <Separator/>
+      <div class="container d-flex flex-column flex-md-row gap-2 justify-content-between py-4">
+        <Typography variant="'small'" className="'text-body-secondary mb-0'">© <t t-esc="new Date().getFullYear()"/> <t t-esc="t('The Base')"/> · <a t-att-href="links.mail">community@thebase.vn</a></Typography>
+        <Typography variant="'small'" className="'text-body-secondary mb-0'"><t t-esc="t('Open-source products are Apache-2.0 or MIT licensed; see each repository.')"/> <a t-att-href="links.github">github.com/thebases</a></Typography>
+      </div>
+    </footer>
+  </t>
+</templates>

@@ -34,6 +34,13 @@ jobs:
           [ "$new" != "$old" ] || { echo "::error::version.json did not change ($old)"; exit 1; }
           echo "version: $old -> $new"
 
+      # Generates the blog post list and RSS feeds from blog/*/index.<lang>.md (nested groups allowed).
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build blog
+        run: make blog
+
       - name: Stage site
         run: |
           mkdir _site

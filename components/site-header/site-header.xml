@@ -1,0 +1,24 @@
+<templates xml:space="preserve">
+  <t t-name="site.Header">
+    <header class="site-header">
+      <div class="container d-flex align-items-center gap-3 py-2">
+        <a href="#/" class="site-brand" aria-label="The Base">
+          <img class="logo-light" src="/assets/img/logo.png" alt="The Base" width="96" height="48"/>
+          <img class="logo-dark" src="/assets/img/logo_dark.png" alt="The Base" width="48" height="48"/>
+        </a>
+        <NavigationMenu className="'ms-auto flex-nowrap min-w-0'">
+          <NavigationMenuItem href="'#/products'" className="props.page === 'products' ? 'active' : ''"><t t-esc="t('Products')"/></NavigationMenuItem>
+          <NavigationMenuItem href="'#/blog'" className="props.page === 'blog' ? 'active' : ''"><t t-esc="t('Blog')"/></NavigationMenuItem>
+          <NavigationMenuItem href="'#/contact'" className="'d-none d-sm-block'"><t t-esc="t('Contact')"/></NavigationMenuItem>
+        </NavigationMenu>
+        <Separator orientation="'vertical'" className="'d-none d-sm-block'" style="{ height: '1.5rem' }"/>
+        <div class="d-flex align-items-center gap-1">
+          <LanguageSwitcher/>
+          <Button variant="'ghost'" size="'icon'" icon="'code-xml'" ariaLabel="'GitHub'" href="links.github"/>
+          <ThemeButton/>
+        </div>
+      </div>
+      <Separator/>
+    </header>
+  </t>
+</templates>

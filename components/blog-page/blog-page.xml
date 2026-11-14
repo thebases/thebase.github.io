@@ -1,0 +1,25 @@
+<templates xml:space="preserve">
+  <t t-name="page.blog">
+    <div>
+      <Seo title="seoTitle" description="t('News, release notes and engineering notes on payments, ERP and AI from The Base community.')"/>
+      <div class="container py-4">
+        <Typography variant="'h1'" className="'display-6 fw-bold'"><t t-esc="heading"/></Typography>
+        <Typography variant="'muted'"><t t-esc="t('News, release notes and engineering notes from the community.')"/></Typography>
+        <nav class="d-flex flex-wrap align-items-center gap-1 mb-4" t-att-aria-label="t('Tags')">
+          <a class="tag-chip" t-att-href="'#/blog'"><Badge variant="tag || group ? 'secondary' : 'primary'" label="t('All posts')"/></a>
+          <a t-foreach="state.tags" t-as="tg" t-key="tg.slug" class="tag-chip" t-att-href="'#/blog/tag/' + tg.slug"><Badge variant="tg.slug === tag ? 'primary' : 'secondary'" label="tg.label"/></a>
+          <a class="ms-auto small" t-att-href="feedHref"><t t-esc="t('RSS feed')"/></a>
+        </nav>
+        <Empty t-if="!state.posts.length"><EmptyHeader><EmptyTitle><t t-esc="t('No posts yet.')"/></EmptyTitle></EmptyHeader></Empty>
+        <section t-foreach="sections" t-as="sec" t-key="sec.path" class="mb-4">
+          <Typography t-if="sec.path" variant="'h2'" className="'h4 mb-3'"><a t-att-href="'#/blog/group/' + sec.path" t-esc="sec.title"/></Typography>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4" t-foreach="sec.posts" t-as="post" t-key="post.slug">
+              <PostCard post="post" date="fmtDate"/>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </t>
+</templates>

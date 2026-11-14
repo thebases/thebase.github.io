@@ -2,6 +2,7 @@
 title: "Owl vs React: which one fits which situation?"
 description: Owl is small and needs no build step. React has a larger ecosystem and more developers. So which framework should you choose in specific situations?
 date: 2026-11-14
+position: 4
 tags: [owl, react, frontend]
 ---
 

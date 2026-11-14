@@ -8,19 +8,5 @@
   "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "lang": "en",
-  "icons": [
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ]
+  "lang": "en"
 }

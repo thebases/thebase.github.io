@@ -1,0 +1,168 @@
+msgid ""
+msgstr "Project-Id-Version: thebase.github.io\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: vi\n"
+
+msgid "Products"
+msgstr "Sản phẩm"
+
+msgid "Contact"
+msgstr "Liên hệ"
+
+msgid "News, release notes and engineering notes on payments, ERP and AI from The Base community."
+msgstr "Tin tức, ghi chú phát hành và ghi chú kỹ thuật về thanh toán, ERP và AI từ cộng đồng The Base."
+
+msgid "The Base blog"
+msgstr "Blog The Base"
+
+msgid "News, release notes and engineering notes from the community."
+msgstr "Tin tức, ghi chú phát hành và ghi chú kỹ thuật từ cộng đồng."
+
+msgid "Posts tagged “{tag}”"
+msgstr "Bài viết gắn thẻ “{tag}”"
+
+msgid "Tags"
+msgstr "Thẻ"
+
+msgid "All posts"
+msgstr "Tất cả bài viết"
+
+
+msgid "On this page"
+msgstr "Trong trang này"
+
+msgid "Back to blog"
+msgstr "Về trang blog"
+
+msgid "No posts yet."
+msgstr "Chưa có bài viết."
+
+msgid "Not translated yet"
+msgstr "Chưa có bản dịch"
+
+msgid "This post is not available in your language yet, so it is shown in its original language."
+msgstr "Bài viết này chưa có bản tiếng Việt nên hiển thị bằng ngôn ngữ gốc."
+
+msgid "RSS feed"
+msgstr "RSS"
+
+
+msgid "The Base: the software base for payments, ERP and AI"
+msgstr "The Base: nền tảng phần mềm cho thanh toán, ERP và AI"
+
+msgid "Open-source tools and platforms: a UI library, an AI-ready ERP platform, EMV knowledge and test tools, and remote device support."
+msgstr "Công cụ và nền tảng mã nguồn mở: thư viện UI, nền tảng ERP sẵn sàng cho AI, kiến thức và công cụ kiểm thử EMV, hỗ trợ thiết bị từ xa."
+
+msgid "The software base for payments, ERP and AI."
+msgstr "Nền tảng phần mềm cho thanh toán, ERP và AI."
+
+msgid "Explore products"
+msgstr "Khám phá sản phẩm"
+
+msgid "View on GitHub"
+msgstr "Xem trên GitHub"
+
+msgid "Featured products"
+msgstr "Sản phẩm nổi bật"
+
+msgid "Four ways to build on The Base."
+msgstr "Bốn cách để xây dựng trên The Base."
+
+msgid "See all products"
+msgstr "Xem tất cả sản phẩm"
+
+msgid "Build with us"
+msgstr "Cùng xây dựng với chúng tôi"
+
+msgid "Questions, partnerships or a product demo? Write to the community team."
+msgstr "Có câu hỏi, muốn hợp tác hoặc xem demo sản phẩm? Hãy viết cho đội ngũ cộng đồng."
+
+msgid "Products | The Base"
+msgstr "Sản phẩm | The Base"
+
+msgid "Every Base product in one place: Nodex UI, Base HUB, EMVHUB, Base Remote, APDU Sender and 2qr.app."
+msgstr "Toàn bộ sản phẩm của The Base: Nodex UI, Base HUB, EMVHUB, Base Remote, APDU Sender và 2qr.app."
+
+msgid "All Base products"
+msgstr "Tất cả sản phẩm của Base"
+
+msgid "Pick the tool that fits your job. Each one links to its home."
+msgstr "Chọn công cụ phù hợp với công việc của bạn. Mỗi sản phẩm có liên kết riêng."
+
+
+
+msgid "Open-source products are Apache-2.0 or MIT licensed; see each repository."
+msgstr "Các sản phẩm mã nguồn mở dùng giấy phép Apache-2.0 hoặc MIT; xem từng kho mã."
+
+msgid "HTML-first UI components. Add a CDN link, no build step."
+msgstr "Thành phần UI ưu tiên HTML. Thêm một liên kết CDN, không cần bước build."
+
+msgid "Nodex UI home page: UI components with no build step, with docs links and the npm install command"
+msgstr "Trang chủ Nodex UI: thành phần UI không cần bước build, kèm liên kết tài liệu và lệnh npm install"
+
+msgid "View on npm"
+msgstr "Xem trên npm"
+
+msgid "Platform"
+msgstr "Nền tảng"
+
+msgid "A modular business platform that AI can build on: data models, workflows and UI defined as data, exposed to AI through MCP."
+msgstr "Nền tảng nghiệp vụ dạng mô-đun để AI xây dựng: mô hình dữ liệu, quy trình và giao diện được định nghĩa bằng dữ liệu, mở cho AI qua MCP."
+
+msgid "Base HUB admin workspace with menu sidebar, partner, user, site and page counts, and quick links"
+msgstr "Không gian quản trị Base HUB với menu bên trái, số liệu đối tác, người dùng, trang web, trang và các liên kết nhanh"
+
+msgid "Payments"
+msgstr "Thanh toán"
+
+msgid "A wiki for EMV knowledge: learn how chip card payments work."
+msgstr "Wiki kiến thức EMV: tìm hiểu cách thanh toán thẻ chip hoạt động."
+
+msgid "EMVHUB home page: practical EMV engineering with terminal, EMV kernel, issuer, TLV data, EMV QR and backend diagrams"
+msgstr "Trang chủ EMVHUB: kỹ thuật EMV thực tế với sơ đồ terminal, EMV kernel, issuer, dữ liệu TLV, EMV QR và backend"
+
+msgid "Read the wiki"
+msgstr "Đọc wiki"
+
+msgid "Devices"
+msgstr "Thiết bị"
+
+msgid "Open-source remote support for Android devices: see and control a phone from your browser."
+msgstr "Hỗ trợ từ xa mã nguồn mở cho thiết bị Android: xem và điều khiển điện thoại ngay trên trình duyệt."
+
+msgid "Base Remote console: enter the Session ID and password from the mobile device to start controlling it"
+msgstr "Bảng điều khiển Base Remote: nhập Session ID và mật khẩu từ thiết bị di động để bắt đầu điều khiển"
+
+msgid "Open Base Remote"
+msgstr "Mở Base Remote"
+
+msgid "Turn an NFC phone into a contactless reader for EMV, Apple VAS and Google Smart Tap testing."
+msgstr "Biến điện thoại NFC thành đầu đọc contactless để kiểm thử EMV, Apple VAS và Google Smart Tap."
+
+msgid "APDU Sender: an NFC phone sends APDU commands to EMV, Apple VAS, Google Smart Tap, MIFARE, FeliCa and Java Card cards, with a decoded TLV response console"
+msgstr "APDU Sender: điện thoại NFC gửi lệnh APDU tới thẻ EMV, Apple VAS, Google Smart Tap, MIFARE, FeliCa và Java Card, kèm bảng phản hồi TLV đã giải mã"
+
+msgid "Tools"
+msgstr "Công cụ"
+
+msgid "A QR code tool on the web."
+msgstr "Công cụ tạo mã QR trên web."
+
+msgid "2qr.app QR code generator with VietQR form, live preview and download options"
+msgstr "Công cụ tạo mã QR 2qr.app với biểu mẫu VietQR, xem trước trực tiếp và tùy chọn tải xuống"
+
+msgid "Open 2qr.app"
+msgstr "Mở 2qr.app"
+
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+msgid "{title} | The Base"
+msgstr "{title} | The Base"
+
+msgid "Blog | The Base"
+msgstr "Blog | The Base"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "/blog/feed.xml"
+msgstr "/blog/feed.vi.xml"

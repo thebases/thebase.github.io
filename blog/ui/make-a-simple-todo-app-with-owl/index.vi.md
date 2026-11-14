@@ -2,6 +2,7 @@
 title: "Owl vs React: chọn framework nào cho tình huống nào?"
 description: Owl nhỏ gọn và không cần bước build. React có hệ sinh thái lớn hơn và nhiều lập trình viên hơn. Vậy nên chọn framework nào trong các tình huống cụ thể?
 date: 2026-11-14
+position: 3
 tags: [owl, react, frontend]
 ---
 

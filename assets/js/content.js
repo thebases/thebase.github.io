@@ -1,5 +1,10 @@
-// All page copy in one place: English (en) and Vietnamese (vi). Vietnamese needs native review.
-const links = {
+import { loadCatalog, t } from "../../i18n/index.js";
+
+// Fetches the Vietnamese texts before the product texts below are wrapped in t().
+await loadCatalog(import.meta.url);
+
+// Product data. Texts are written in English and translated here with t() from i18n/index.js (catalog: i18n/vi.po).
+export const links = {
   github: "https://github.com/thebases",
   hub: "https://github.com/thebases/base-hub",
   remote: "https://ui.thebase.vn/remote-controller-server/",
@@ -10,155 +15,41 @@ const links = {
   mail: "mailto:community@thebase.vn",
 };
 
-export const content = {
-  en: {
-    lang: "en",
-    base: "/",
-    other: { code: "vi", label: "Tiếng Việt", base: "/vi/" },
-    links,
-    nav: { products: "Products", contact: "Contact", github: "GitHub", menu: "Menu" },
-    home: {
-      title: "The Base: the software base for payments, ERP and AI",
-      description: "Open-source tools and platforms: a UI library, an AI-ready ERP platform, EMV knowledge and test tools, and remote device support.",
-      h1: "The software base for payments, ERP and AI.",
-      sub: "Open-source tools and platforms: a UI library, an AI-ready ERP platform, EMV knowledge and test tools, and remote device support.",
-      ctaProducts: "Explore products",
-      ctaGithub: "View on GitHub",
-      featuredTitle: "Featured products",
-      featuredSub: "Four ways to build on The Base.",
-      all: "See all products",
-      contactTitle: "Build with us",
-      contactSub: "Questions, partnerships or a product demo? Write to the community team.",
-      contactCta: "community@thebase.vn",
-    },
-    products: {
-      title: "Products | The Base",
-      description: "Every Base product in one place: Nodex UI, Base HUB, EMVHUB, Base Remote, APDU Sender and 2qr.app.",
-      h1: "All Base products",
-      sub: "Pick the tool that fits your job. Each one links to its home.",
-      more: "Learn more",
-      features: "Key features",
-      snippetTitle: "Add it with one import map",
-    },
-    footer: { license: "Open-source products are Apache-2.0 or MIT licensed; see each repository.", rights: "The Base" },
-    items: [
-      {
-        id: "nodexui", name: "Nodex UI", tag: "UI", featured: true,
-        value: "HTML-first UI components. Add a CDN link, no build step.",
-        features: ["HTML-first, installs from a CDN", "Vanilla-JS components, no build step", "MIT licensed"],
-        image: { src: "/assets/img/products/nodexui.svg", alt: "Nodex UI home page: UI components with no build step, with docs links and the npm install command", width: 1682, height: 856 },
-        cta: "View on npm", href: links.nodex,
-      },
-      {
-        id: "base-hub", name: "Base HUB", tag: "Platform", featured: true,
-        value: "A modular business platform that AI can build on: data models, workflows and UI defined as data, exposed to AI through MCP.",
-        features: ["Server-driven UI and a visual workflow builder", "MCP gateway with OAuth 2.0 for AI clients", "Multi-tenant with role-based access, one Go binary"],
-        image: { src: "/assets/img/products/base-hub.svg", alt: "Base HUB admin workspace with menu sidebar, partner, user, site and page counts, and quick links", width: 1897, height: 857 },
-        cta: "View on GitHub", href: links.hub,
-      },
-      {
-        id: "emvhub", name: "EMVHUB", tag: "Payments", featured: true,
-        value: "A wiki for EMV knowledge: learn how chip card payments work.",
-        features: ["A wiki for EMV and chip-card payments", "Pairs with APDU Sender for hands-on tests"],
-        image: { src: "/assets/img/products/emvhub.svg", alt: "EMVHUB home page: practical EMV engineering with terminal, EMV kernel, issuer, TLV data, EMV QR and backend diagrams", width: 1660, height: 741 },
-        cta: "Read the wiki", href: links.emvhub,
-      },
-      {
-        id: "base-remote", name: "Base Remote", tag: "Devices", featured: true,
-        value: "Open-source remote support for Android devices: see and control a phone from your browser.",
-        features: ["Screen sharing and gestures over WebRTC", "Pair with a Session ID and password", "Runs on 1 CPU and 2 GB of RAM"],
-        image: { src: "/assets/img/products/base-remote.svg", alt: "Base Remote console: enter the Session ID and password from the mobile device to start controlling it", width: 1688, height: 862 },
-        cta: "Open Base Remote", href: links.remote,
-      },
-      {
-        id: "apdu-sender", name: "APDU Sender", tag: "Payments",
-        value: "Turn an NFC phone into a contactless reader for EMV, Apple VAS and Google Smart Tap testing.",
-        features: ["Send raw APDUs or scripts", "Decoded EMV TLV tree", "Apple VAS and Google Smart Tap tests; Android 10+"],
-        image: { src: "/assets/img/products/apdu-sender.svg", alt: "APDU Sender: an NFC phone sends APDU commands to EMV, Apple VAS, Google Smart Tap, MIFARE, FeliCa and Java Card cards, with a decoded TLV response console", width: 1688, height: 862 },
-        cta: "View on GitHub", href: links.apdu,
-      },
-      {
-        id: "2qr", name: "2qr.app", tag: "Tools",
-        value: "A QR code tool on the web.",
-        features: ["Runs in your browser"],
-        image: { src: "/assets/img/products/2qr.svg", alt: "2qr.app QR code generator with VietQR form, live preview and download options", width: 1260, height: 770 },
-        cta: "Open 2qr.app", href: links.qr,
-      },
-    ],
+export const items = [
+  {
+    id: "nodexui", name: "Nodex UI", tag: t("UI"), featured: true,
+    value: t("HTML-first UI components. Add a CDN link, no build step."),
+    image: { src: "/assets/img/products/nodexui.svg", alt: t("Nodex UI home page: UI components with no build step, with docs links and the npm install command"), width: 1682, height: 856 },
+    cta: t("View on npm"), href: links.nodex,
   },
-  vi: {
-    lang: "vi",
-    base: "/vi/",
-    other: { code: "en", label: "English", base: "/" },
-    links,
-    nav: { products: "Sản phẩm", contact: "Liên hệ", github: "GitHub", menu: "Menu" },
-    home: {
-      title: "The Base: nền tảng phần mềm cho thanh toán, ERP và AI",
-      description: "Công cụ và nền tảng mã nguồn mở: thư viện UI, nền tảng ERP sẵn sàng cho AI, kiến thức và công cụ kiểm thử EMV, hỗ trợ thiết bị từ xa.",
-      h1: "Nền tảng phần mềm cho thanh toán, ERP và AI.",
-      sub: "Công cụ và nền tảng mã nguồn mở: thư viện UI, nền tảng ERP sẵn sàng cho AI, kiến thức và công cụ kiểm thử EMV, hỗ trợ thiết bị từ xa.",
-      ctaProducts: "Khám phá sản phẩm",
-      ctaGithub: "Xem trên GitHub",
-      featuredTitle: "Sản phẩm nổi bật",
-      featuredSub: "Bốn cách để xây dựng trên The Base.",
-      all: "Xem tất cả sản phẩm",
-      contactTitle: "Cùng xây dựng với chúng tôi",
-      contactSub: "Có câu hỏi, muốn hợp tác hoặc xem demo sản phẩm? Hãy viết cho đội ngũ cộng đồng.",
-      contactCta: "community@thebase.vn",
-    },
-    products: {
-      title: "Sản phẩm | The Base",
-      description: "Toàn bộ sản phẩm của The Base: Nodex UI, Base HUB, EMVHUB, Base Remote, APDU Sender và 2qr.app.",
-      h1: "Tất cả sản phẩm của Base",
-      sub: "Chọn công cụ phù hợp với công việc của bạn. Mỗi sản phẩm có liên kết riêng.",
-      more: "Tìm hiểu thêm",
-      features: "Tính năng chính",
-      snippetTitle: "Thêm vào dự án chỉ với một import map",
-    },
-    footer: { license: "Các sản phẩm mã nguồn mở dùng giấy phép Apache-2.0 hoặc MIT; xem từng kho mã.", rights: "The Base" },
-    items: [
-      {
-        id: "nodexui", name: "Nodex UI", tag: "UI", featured: true,
-        value: "Thành phần UI ưu tiên HTML. Thêm một liên kết CDN, không cần bước build.",
-        features: ["Ưu tiên HTML, cài từ CDN", "Thành phần JS thuần, không cần build", "Giấy phép MIT"],
-        image: { src: "/assets/img/products/nodexui.svg", alt: "Trang chủ Nodex UI: thành phần UI không cần bước build, kèm liên kết tài liệu và lệnh npm install", width: 1682, height: 856 },
-        cta: "Xem trên npm", href: links.nodex,
-      },
-      {
-        id: "base-hub", name: "Base HUB", tag: "Nền tảng", featured: true,
-        value: "Nền tảng nghiệp vụ dạng mô-đun để AI xây dựng: mô hình dữ liệu, quy trình và giao diện được định nghĩa bằng dữ liệu, mở cho AI qua MCP.",
-        features: ["Giao diện điều khiển từ máy chủ và trình dựng quy trình trực quan", "Cổng MCP với OAuth 2.0 cho các ứng dụng AI", "Đa tenant, phân quyền theo vai trò, một tệp Go duy nhất"],
-        image: { src: "/assets/img/products/base-hub.svg", alt: "Không gian quản trị Base HUB với menu bên trái, số liệu đối tác, người dùng, trang web, trang và các liên kết nhanh", width: 1897, height: 857 },
-        cta: "Xem trên GitHub", href: links.hub,
-      },
-      {
-        id: "emvhub", name: "EMVHUB", tag: "Thanh toán", featured: true,
-        value: "Wiki kiến thức EMV: tìm hiểu cách thanh toán thẻ chip hoạt động.",
-        features: ["Wiki về EMV và thanh toán thẻ chip", "Kết hợp với APDU Sender để thực hành"],
-        image: { src: "/assets/img/products/emvhub.svg", alt: "Trang chủ EMVHUB: kỹ thuật EMV thực tế với sơ đồ terminal, EMV kernel, issuer, dữ liệu TLV, EMV QR và backend", width: 1660, height: 741 },
-        cta: "Đọc wiki", href: links.emvhub,
-      },
-      {
-        id: "base-remote", name: "Base Remote", tag: "Thiết bị", featured: true,
-        value: "Hỗ trợ từ xa mã nguồn mở cho thiết bị Android: xem và điều khiển điện thoại ngay trên trình duyệt.",
-        features: ["Chia sẻ màn hình và cử chỉ qua WebRTC", "Ghép nối bằng Session ID và mật khẩu", "Chạy được trên 1 CPU và 2 GB RAM"],
-        image: { src: "/assets/img/products/base-remote.svg", alt: "Bảng điều khiển Base Remote: nhập Session ID và mật khẩu từ thiết bị di động để bắt đầu điều khiển", width: 1688, height: 862 },
-        cta: "Mở Base Remote", href: links.remote,
-      },
-      {
-        id: "apdu-sender", name: "APDU Sender", tag: "Thanh toán",
-        value: "Biến điện thoại NFC thành đầu đọc contactless để kiểm thử EMV, Apple VAS và Google Smart Tap.",
-        features: ["Gửi APDU thô hoặc script", "Hiển thị cây TLV EMV đã giải mã", "Kiểm thử Apple VAS và Google Smart Tap; Android 10+"],
-        image: { src: "/assets/img/products/apdu-sender.svg", alt: "APDU Sender: điện thoại NFC gửi lệnh APDU tới thẻ EMV, Apple VAS, Google Smart Tap, MIFARE, FeliCa và Java Card, kèm bảng phản hồi TLV đã giải mã", width: 1688, height: 862 },
-        cta: "Xem trên GitHub", href: links.apdu,
-      },
-      {
-        id: "2qr", name: "2qr.app", tag: "Công cụ",
-        value: "Công cụ tạo mã QR trên web.",
-        features: ["Chạy ngay trong trình duyệt"],
-        image: { src: "/assets/img/products/2qr.svg", alt: "Công cụ tạo mã QR 2qr.app với biểu mẫu VietQR, xem trước trực tiếp và tùy chọn tải xuống", width: 1260, height: 770 },
-        cta: "Mở 2qr.app", href: links.qr,
-      },
-    ],
+  {
+    id: "base-hub", name: "Base HUB", tag: t("Platform"), featured: true,
+    value: t("A modular business platform that AI can build on: data models, workflows and UI defined as data, exposed to AI through MCP."),
+    image: { src: "/assets/img/products/base-hub.svg", alt: t("Base HUB admin workspace with menu sidebar, partner, user, site and page counts, and quick links"), width: 1897, height: 857 },
+    cta: t("View on GitHub"), href: links.hub,
   },
-};
+  {
+    id: "emvhub", name: "EMVHUB", tag: t("Payments"), featured: true,
+    value: t("A wiki for EMV knowledge: learn how chip card payments work."),
+    image: { src: "/assets/img/products/emvhub.svg", alt: t("EMVHUB home page: practical EMV engineering with terminal, EMV kernel, issuer, TLV data, EMV QR and backend diagrams"), width: 1660, height: 741 },
+    cta: t("Read the wiki"), href: links.emvhub,
+  },
+  {
+    id: "base-remote", name: "Base Remote", tag: t("Devices"), featured: true,
+    value: t("Open-source remote support for Android devices: see and control a phone from your browser."),
+    image: { src: "/assets/img/products/base-remote.svg", alt: t("Base Remote console: enter the Session ID and password from the mobile device to start controlling it"), width: 1688, height: 862 },
+    cta: t("Open Base Remote"), href: links.remote,
+  },
+  {
+    id: "apdu-sender", name: "APDU Sender", tag: t("Payments"),
+    value: t("Turn an NFC phone into a contactless reader for EMV, Apple VAS and Google Smart Tap testing."),
+    image: { src: "/assets/img/products/apdu-sender.svg", alt: t("APDU Sender: an NFC phone sends APDU commands to EMV, Apple VAS, Google Smart Tap, MIFARE, FeliCa and Java Card cards, with a decoded TLV response console"), width: 1688, height: 862 },
+    cta: t("View on GitHub"), href: links.apdu,
+  },
+  {
+    id: "2qr", name: "2qr.app", tag: t("Tools"),
+    value: t("A QR code tool on the web."),
+    image: { src: "/assets/img/products/2qr.svg", alt: t("2qr.app QR code generator with VietQR form, live preview and download options"), width: 1260, height: 770 },
+    cta: t("Open 2qr.app"), href: links.qr,
+  },
+];

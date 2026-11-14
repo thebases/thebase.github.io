@@ -1,0 +1,21 @@
+<templates xml:space="preserve">
+  <t t-name="site.PostCard">
+    <Card className="'h-100 post-card'">
+      <CardBody className="'d-flex flex-column gap-2'">
+        <AspectRatio t-if="props.post.cover" ratio="'16 / 9'"><img class="post-cover" t-att-src="'/blog/' + props.post.slug + '/' + props.post.cover" alt="" width="640" height="360" loading="lazy"/></AspectRatio>
+        <div class="small text-body-secondary d-flex flex-wrap align-items-center gap-2">
+          <Avatar alt="props.post.author"><t t-set-slot="fallback"><t t-esc="props.post.author.charAt(0)"/></t></Avatar>
+          <span class="fw-semibold" t-esc="props.post.author"/>
+          <span aria-hidden="true">·</span>
+          <time t-att-datetime="props.post.date" t-esc="props.date(props.post.date)"/>
+          <Badge t-if="!props.post.translated" variant="'warning'" label="t('Not translated yet')"/>
+        </div>
+        <CardTitle className="'h5 mb-0'"><a class="post-link" t-att-href="'#/blog/' + props.post.slug"><t t-esc="props.post.title"/></a></CardTitle>
+        <CardDescription className="'mb-0 flex-grow-1'"><t t-esc="props.post.description"/></CardDescription>
+        <div class="d-flex flex-wrap gap-1">
+          <a t-foreach="props.post.tags" t-as="tag" t-key="tag.slug" class="tag-chip" t-att-href="'#/blog/tag/' + tag.slug"><Badge variant="'secondary'" label="tag.label"/></a>
+        </div>
+      </CardBody>
+    </Card>
+  </t>
+</templates>

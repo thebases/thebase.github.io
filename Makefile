@@ -1,8 +1,11 @@
 PORT ?= 8080
 
-.PHONY: run
+.PHONY: run blog
+
+# Builds the post list and RSS feeds from blog/*/index.<lang>.md.
+blog:
+	node scripts/build-blog.mjs
 
 # Serves the site at http://localhost:$(PORT)/ (root-absolute paths need the site at the domain root).
-run:
-	@echo "http://localhost:$(PORT)/"
-	python3 -m http.server $(PORT) --bind 127.0.0.1
+run: blog
+	node scripts/serve.mjs $(PORT)

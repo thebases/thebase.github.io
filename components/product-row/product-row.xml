@@ -1,0 +1,16 @@
+<templates xml:space="preserve">
+  <t t-name="site.ProductRow">
+    <Item variant="'outline'" className="'product-row align-items-center flex-wrap'">
+      <span b-item-media="">
+        <Avatar alt="props.item.name"><t t-set-slot="fallback"><t t-esc="props.item.name.charAt(0)"/></t></Avatar>
+      </span>
+      <span b-item-content="">
+        <span class="d-flex align-items-center gap-2"><strong b-item-title=""><t t-esc="props.item.name"/></strong><Badge variant="'secondary'" label="props.item.tag"/></span>
+        <span b-item-description=""><t t-esc="props.item.value"/></span>
+      </span>
+      <span b-item-actions="">
+        <Button variant="'outline'" size="'sm'" icon="'arrow-right'" iconPosition="'end'" label="props.item.cta" href="props.item.href"/>
+      </span>
+    </Item>
+  </t>
+</templates>

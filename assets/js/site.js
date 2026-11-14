@@ -1,6 +1,28 @@
-import { Component, mount } from "nodexui";
-import { Badge, Button, Card, CardBody, CardDescription, CardTitle, ThemeButton } from "nodexui";
-import { content } from "./content.js";
+import { mount } from "nodexui";
+import { loadCatalog } from "../../i18n/index.js";
+import { App } from "../../components/app/app.js";
+import { loadComponentTemplates } from "../../components/templates.js";
+
+// Fetches the Vietnamese texts (i18n/vi.po) before anything is drawn; English needs no download.
+await loadCatalog(import.meta.url);
+
+/** True when the page runs on the developer's machine rather than the live site. */
+const IS_LOCAL = /^(localhost|127\.|\[::1\]$)/.test(location.hostname);
+
+/** Backend origin that receives analytics events: the local helpdesk server during development,
+ * the production helpdesk otherwise (the same backend as qr-page). Set to "" to disable collection. */
+const BACKEND_URL = IS_LOCAL ? "http://localhost:8388" : "https://helpdesk.thebase.vn";
+
+// Starts cookieless page analytics in the background; a blocked or offline tracker never breaks the site.
+async function startAnalytics() {
+  if (!BACKEND_URL) return;
+  try {
+    const { init, visitorContext } = await import("nodexui/analytics");
+    init({ backendUrl: BACKEND_URL, captureOnLocalhost: IS_LOCAL, outboundLinks: true, customProperties: visitorContext });
+  } catch (err) {
+    console.warn("Analytics unavailable", err);
+  }
+}
 
 // Reloads open pages when a new version is deployed, and registers the offline service worker.
 function registerServiceWorker() {
@@ -14,66 +36,19 @@ function registerServiceWorker() {
   });
 }
 
-// Top bar with logo, navigation, language switch and theme button.
-class SiteHeader extends Component {
-  static template = "site.Header";
-  static components = { Button, ThemeButton };
-}
-
-// Bottom bar with contact and licence notes.
-class SiteFooter extends Component {
-  static template = "site.Footer";
-}
-
-// One product tile: monogram, name, tag, one-line value and a link out.
-class ProductCard extends Component {
-  static template = "site.ProductCard";
-  static components = { Badge, Button, Card, CardBody, CardDescription, CardTitle };
-}
-
-// Base for both pages: picks the copy for the page language from the <div id="app"> attributes.
-class Page extends Component {
-  static components = { SiteHeader, SiteFooter, ProductCard, Button };
-  get c() {
-    return content[document.getElementById("app").dataset.lang];
-  }
-  get featured() {
-    return this.c.items.filter((i) => i.featured);
-  }
-}
-
-// Landing page: hero, featured products and contact call to action.
-class HomePage extends Page {
-  static template = "page.home";
-}
-
-// Product catalogue: one card per product, each linking straight to the product.
-class ProductsPage extends Page {
-  static template = "page.products";
-}
-
-const pages = { home: HomePage, products: ProductsPage };
-
 // Removes the outer <templates> tag so several template files can share one root.
 const stripTemplatesWrapper = (xml) => xml.replace(/^\s*<templates[^>]*>/, "").replace(/<\/templates>\s*$/, "");
 
-// Loads Nodex UI templates plus ours, then renders the page named in data-page.
+// Loads Nodex UI templates plus each component's own, then renders the app into #app.
 async function start() {
-  const el = document.getElementById("app");
-  const [nodex, site] = await Promise.all([
+  const [nodex, components] = await Promise.all([
     fetch(import.meta.resolve("nodexui/templates")).then((r) => r.text()),
-    fetch(new URL("./site.xml", import.meta.url)).then((r) => r.text()),
+    loadComponentTemplates(),
   ]);
-  const templates = `<templates>${stripTemplatesWrapper(nodex)}${stripTemplatesWrapper(site)}</templates>`;
-  await mount(pages[el.dataset.page], el, { templates });
-  if (el.dataset.page === "home") forceDark();
-}
-
-// The home page is dark only, even if the visitor saved a light choice on another page.
-function forceDark() {
-  document.documentElement.setAttribute("b-theme", "dark");
-  document.documentElement.dataset.bsTheme = "dark";
+  const templates = `<templates>${stripTemplatesWrapper(nodex)}${components}</templates>`;
+  await mount(App, document.getElementById("app"), { templates });
 }
 
 registerServiceWorker();
 start();
+startAnalytics();

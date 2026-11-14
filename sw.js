@@ -1,17 +1,41 @@
 const CACHE_NAME = "thebase-site";
-const NODEXUI_CDN = "https://cdn.jsdelivr.net/npm/nodexui@1.3.4/dist/";
+const NODEXUI_CDN = "https://cdn.jsdelivr.net/npm/nodexui@1.3.5/dist/";
 
 const PRECACHE_URLS = [
   "/",
   "/manifest.webmanifest",
   "/favicon.ico",
-  "/icons/icon-512.png",
-  "/products.html",
-  "/vi/",
-  "/vi/products.html",
   "/assets/js/site.js",
   "/assets/js/content.js",
-  "/assets/js/site.xml",
+  "/assets/js/utils.js",
+  "/components/app/app.js",
+  "/components/blog-page/blog-page.js",
+  "/components/home-page/home-page.js",
+  "/components/language-switcher/language-switcher.js",
+  "/components/page/page.js",
+  "/components/post-card/post-card.js",
+  "/components/post-page/post-page.js",
+  "/components/product-card/product-card.js",
+  "/components/product-row/product-row.js",
+  "/components/products-page/products-page.js",
+  "/components/seo/seo.js",
+  "/components/site-footer/site-footer.js",
+  "/components/site-header/site-header.js",
+  "/components/templates.js",
+  "/components/app/app.xml",
+  "/components/blog-page/blog-page.xml",
+  "/components/home-page/home-page.xml",
+  "/components/language-switcher/language-switcher.xml",
+  "/components/post-card/post-card.xml",
+  "/components/post-page/post-page.xml",
+  "/components/product-card/product-card.xml",
+  "/components/product-row/product-row.xml",
+  "/components/products-page/products-page.xml",
+  "/components/seo/seo.xml",
+  "/components/site-footer/site-footer.xml",
+  "/components/site-header/site-header.xml",
+  "/i18n/index.js",
+  "/i18n/vi.po",
   "/assets/css/site.css",
   "/assets/img/logo.png",
   "/assets/img/logo_dark.png",
@@ -21,9 +45,10 @@ const PRECACHE_URLS = [
   "/assets/img/products/nodexui.svg",
   "/assets/img/products/base-remote.svg",
   "/assets/img/products/apdu-sender.svg",
-  "https://cdn.jsdelivr.net/npm/nodexui@1.3.4/dist/nodexui.min.css",
-  "https://cdn.jsdelivr.net/npm/nodexui@1.3.4/dist/nodexui.esm.js",
-  "https://cdn.jsdelivr.net/npm/nodexui@1.3.4/dist/nodexui.templates.xml"
+  "https://cdn.jsdelivr.net/npm/nodexui@1.3.5/dist/nodexui.min.css",
+  "https://cdn.jsdelivr.net/npm/nodexui@1.3.5/dist/nodexui.esm.js",
+  "https://cdn.jsdelivr.net/npm/nodexui@1.3.5/dist/nodexui.i18n.esm.js",
+  "https://cdn.jsdelivr.net/npm/nodexui@1.3.5/dist/nodexui.templates.xml"
 ];
 
 /** Last-seen app version lives in its own cache so wiping the app caches never forgets it. */

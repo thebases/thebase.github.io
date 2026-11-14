@@ -1,0 +1,18 @@
+<templates xml:space="preserve">
+  <t t-name="page.products">
+    <div>
+      <Seo title="t('Products | The Base')" description="t('Every Base product in one place: Nodex UI, Base HUB, EMVHUB, Base Remote, APDU Sender and 2qr.app.')"/>
+      <div>
+        <section class="container py-5 products-page">
+          <Typography variant="'h1'" className="'display-6 fw-bold'"><t t-esc="t('All Base products')"/></Typography>
+          <Typography variant="'lead'" className="'text-body-secondary'"><t t-esc="t('Pick the tool that fits your job. Each one links to its home.')"/></Typography>
+          <div class="row g-3 mt-3">
+            <div class="col-12 col-md-6 col-lg-4" t-foreach="items" t-as="item" t-key="item.id">
+              <ProductCard item="item"/>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </t>
+</templates>

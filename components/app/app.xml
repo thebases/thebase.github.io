@@ -1,0 +1,11 @@
+<templates xml:space="preserve">
+  <t t-name="site.App">
+    <div>
+      <SiteHeader page="state.route.page === 'post' ? 'blog' : state.route.page"/>
+      <main>
+        <t t-component="pages[state.route.page]" route="state.route" t-key="pageKey"/>
+      </main>
+      <SiteFooter/>
+    </div>
+  </t>
+</templates>

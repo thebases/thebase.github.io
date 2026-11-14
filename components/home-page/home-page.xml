@@ -1,0 +1,41 @@
+<templates xml:space="preserve">
+  <t t-name="page.home">
+    <div>
+      <Seo title="t('The Base: the software base for payments, ERP and AI')" description="t('Open-source tools and platforms: a UI library, an AI-ready ERP platform, EMV knowledge and test tools, and remote device support.')"/>
+      <div>
+        <section class="hero" b-theme="dark">
+          <video class="hero-video" autoplay="" muted="" playsinline="" loop="" disablepictureinpicture="" aria-hidden="true"><source t-att-src="'/assets/videoBG.mp4'" type="video/mp4"/></video>
+          <div class="hero-content container py-5">
+            <Typography variant="'h1'" className="'fw-bold'" style="'font-size: clamp(2.25rem, 5vw, 3.75rem)'"><t t-esc="t('The software base for payments, ERP and AI.')"/></Typography>
+            <Typography variant="'lead'" className="'mt-3'"><t t-esc="t('Open-source tools and platforms: a UI library, an AI-ready ERP platform, EMV knowledge and test tools, and remote device support.')"/></Typography>
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <Button size="'lg'" icon="'arrow-right'" iconPosition="'end'" label="t('Explore products')" href="'#/products'"/>
+              <Button size="'lg'" variant="'outline'" icon="'code-xml'" label="t('View on GitHub')" href="links.github"/>
+            </div>
+          </div>
+        </section>
+        <section class="container py-5" t-att-aria-label="t('Featured products')">
+          <Typography variant="'h2'" className="'h3'"><t t-esc="t('Featured products')"/></Typography>
+          <Typography variant="'muted'"><t t-esc="t('Four ways to build on The Base.')"/></Typography>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3" t-foreach="featured" t-as="item" t-key="item.id">
+              <ProductCard item="item"/>
+            </div>
+          </div>
+          <div class="mt-4"><Button variant="'link'" icon="'arrow-right'" iconPosition="'end'" label="t('See all products')" href="'#/products'"/></div>
+        </section>
+        <section id="contact" class="container pb-5">
+          <Card>
+            <CardBody className="'d-flex flex-column flex-md-row align-items-md-center gap-3 p-4'">
+              <div class="flex-grow-1">
+                <CardTitle className="'h3'"><t t-esc="t('Build with us')"/></CardTitle>
+                <CardDescription className="'mb-0'"><t t-esc="t('Questions, partnerships or a product demo? Write to the community team.')"/></CardDescription>
+              </div>
+              <Button icon="'mail'" label="'community@thebase.vn'" href="links.mail"/>
+            </CardBody>
+          </Card>
+        </section>
+      </div>
+    </div>
+  </t>
+</templates>

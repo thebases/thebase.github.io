@@ -1,0 +1,15 @@
+<templates xml:space="preserve">
+  <t t-name="site.LanguageSwitcher">
+    <DropdownMenu>
+      <DropdownMenuTrigger className="'btn-icon'">
+        <Icon name="'languages'"/>
+        <span class="visually-hidden" t-esc="t('Language')"/>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="'end'">
+        <DropdownMenuRadioGroup value="current" onValueChange="changeLanguage">
+          <DropdownMenuRadioItem t-foreach="languages" t-as="item" t-key="item.code" value="item.code"><t t-esc="item.label"/></DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  </t>
+</templates>

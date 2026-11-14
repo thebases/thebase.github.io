@@ -4,19 +4,20 @@
 .logo-dark { display: none; }
 /* Dark mode uses a deep blue to match the hero video instead of pure black. */
 [b-theme="dark"] { --b-background: #060d1f; --b-surface: #0a1329; --b-muted: #1a2d5e; --b-accent: #1a2d5e; --b-secondary: #1a2d5e; --b-sidebar: #0a1329; --b-border: #18274a; --b-input: #1e3263; --bs-body-bg-rgb: 6, 13, 31; --bs-secondary-bg-rgb: 26, 45, 94; --bs-tertiary-bg-rgb: 26, 45, 94; }
+/* Brighter secondary/muted text in dark mode for readability. */
+[b-theme="dark"] { --bs-secondary-color: #a9bfe9; --b-muted-foreground: #a9bfe9; }
+[b-theme="dark"] .text-body-secondary { color: #a9bfe9 !important; }
 [b-theme="dark"] body, [b-theme="dark"] .site-footer { background: var(--b-background); }
 [b-theme="dark"] .logo-light { display: none; }
 [b-theme="dark"] .logo-dark { display: inline-block; }
-.nav-link-site { color: var(--bs-body-color); text-decoration: none; padding: 0.4rem 0.6rem; border-radius: 6px; font-size: 0.9rem; }
-.nav-link-site:hover, .nav-link-site[aria-current="page"] { background: var(--bs-secondary-bg); }
-.hero h1 { max-width: 18ch; letter-spacing: -0.02em; }
-.hero .lead { max-width: 60ch; }
+.hero h1 { max-width: 16ch; letter-spacing: -0.02em; }
+.hero .lead { max-width: 60ch; color: #a9bfe9; text-shadow: 0 1px 8px rgba(6, 13, 31, 0.9); }
+.hero h1 { text-shadow: 0 2px 12px rgba(6, 13, 31, 0.8); }
 /* Full-width, full-height hero (viewport minus the 77px sticky header) with a looping video behind dimmed text. */
-.hero { position: relative; display: grid; place-items: center; min-height: calc(100svh - 77px); overflow: hidden; color: #fff; background: #060d1f; }
+.hero { position: relative; display: grid; align-items: center; min-height: calc(100svh - 77px); overflow: hidden; color: #fff; background: #060d1f; }
 .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero::after { content: ""; position: absolute; inset: 0; background: rgba(6, 13, 31, 0.55); }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(6, 13, 31, 0.68); }
 .hero-content { position: relative; z-index: 1; }
-.mono-mark { display: inline-grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 8px; background: var(--bs-body-color); color: var(--bs-body-bg); font-weight: 700; flex: none; }
 .feature-list { padding-left: 1.1rem; }
 .feature-list li { margin-bottom: 0.4rem; }
 .snippet { background: var(--bs-secondary-bg); border-radius: 8px; padding: 1rem; overflow-x: auto; font-size: 0.8rem; }
@@ -26,4 +27,22 @@ a:focus-visible { outline: 2px solid var(--bs-body-color); outline-offset: 2px; 
 /* Product screenshots keep their aspect ratio and get a soft frame so white screenshots stand out in both themes. */
 .product-shot { display: block; width: 100%; height: auto; border: 1px solid var(--bs-border-color); border-radius: 8px; }
 /* Card pictures share one fixed frame and scale to fit whole (no cropping); white fill blends with the white screenshots. */
-.product-card .product-shot { aspect-ratio: 16 / 10; object-fit: contain; object-position: top; background: #fff; }
+.product-frame { border-radius: 8px; overflow: hidden; }
+.product-card .product-shot { height: 100%; object-fit: contain; object-position: top; background: #fff; }
+/* Blog: cards share a 16:9 cover frame; tags are plain links around Badge; the article column stays readable. */
+.post-cover { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+.post-link { color: inherit; text-decoration: none; }
+.post-link:hover { text-decoration: underline; }
+.tag-chip { text-decoration: none; }
+.post-page article { min-width: 0; }
+.post-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+@media (min-width: 1200px) { .post-layout { grid-template-columns: minmax(0, 1fr) 15rem; } }
+.post-toc { order: -1; }
+@media (min-width: 1200px) { .post-toc { order: 0; } }
+.post-toc { position: sticky; top: 5rem; align-self: start; max-height: calc(100vh - 6rem); overflow-y: auto; }
+@media (min-width: 1200px) { .post-toc { border-inline-start: 1px solid var(--bs-border-color); padding-inline-start: 1rem; } }
+.toc-link { display: block; padding: .2rem 0; font-size: .875rem; color: var(--bs-secondary-color); text-decoration: none; }
+.toc-link:hover { color: var(--bs-body-color); }
+.toc-l3 { padding-inline-start: 1rem; }
+.post-body img { max-width: 100%; height: auto; }
+.product-row [b-item-content] { flex: 1 1 16rem; }

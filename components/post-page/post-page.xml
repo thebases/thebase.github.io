@@ -1,0 +1,36 @@
+<templates xml:space="preserve">
+  <t t-name="page.post">
+    <div>
+      <Seo t-if="state.post" title="state.post.seo.title" description="state.post.seo.description" keywords="state.post.seo.keywords" image="state.post.seo.image" canonical="state.post.seo.canonical" noindex="state.post.seo.noindex" lang="state.post.shown" article="article"/>
+      <div class="container-fluid px-4 px-xl-5 py-4 post-page">
+        <div class="post-layout">
+        <article t-if="state.body !== null" t-att-lang="state.post.shown">
+          <header class="mb-4">
+            <Typography variant="'h1'" className="'display-6 fw-bold'"><t t-esc="state.post.title"/></Typography>
+            <Typography variant="'lead'" className="'mb-3'"><t t-esc="state.post.description"/></Typography>
+            <div class="small text-body-secondary d-flex flex-wrap align-items-center gap-2">
+              <Avatar alt="state.post.author"><t t-set-slot="fallback"><t t-esc="state.post.author.charAt(0)"/></t></Avatar>
+              <span class="fw-semibold" t-esc="state.post.author"/>
+              <span aria-hidden="true">·</span>
+              <time t-att-datetime="state.post.date" t-esc="fmtDate(state.post.date)"/>
+              <Badge t-if="!state.post.translated" variant="'warning'" label="t('Not translated yet')"/>
+              <a t-foreach="state.post.tags" t-as="tag" t-key="tag.slug" class="tag-chip" t-att-href="'#/blog/tag/' + tag.slug"><Badge variant="'secondary'" label="tag.label"/></a>
+            </div>
+            <Alert t-if="!state.post.translated" variant="'warning'" className="'mt-3'"><AlertDescription><t t-esc="t('This post is not available in your language yet, so it is shown in its original language.')"/></AlertDescription></Alert>
+          </header>
+          <Separator className="'mb-4'"/>
+          <div class="post-body"><Markdown content="state.body" nodexUi="false"/></div>
+        </article>
+        <Empty t-else=""><EmptyHeader><EmptyTitle><t t-esc="t('No posts yet.')"/></EmptyTitle></EmptyHeader></Empty>
+        <aside class="post-toc">
+          <p class="mb-3"><Button variant="'link'" icon="'arrow-left'" label="t('Back to blog')" href="state.post?.group ? '#/blog/group/' + state.post.group : '#/blog'"/></p>
+          <nav t-if="state.toc.length" class="d-none d-xl-block" t-att-aria-label="t('On this page')">
+            <Typography variant="'small'" className="'fw-semibold text-uppercase mb-2'"><t t-esc="t('On this page')"/></Typography>
+            <a t-foreach="state.toc" t-as="h" t-key="h.id" t-att-href="'#' + h.id" t-on-click="(ev) => goTo(ev, h.id)" t-att-class="'toc-link toc-l' + h.level"><t t-esc="h.text"/></a>
+          </nav>
+        </aside>
+        </div>
+      </div>
+    </div>
+  </t>
+</templates>
